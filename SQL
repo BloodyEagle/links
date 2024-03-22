@@ -1,0 +1,5 @@
+Вычисление возраста в SQL
+
+SELECT (
+        YEAR(NOW()) - YEAR(birthday) - IF(RIGHT(NOW(),5) < RIGHT(birthday,5), 1, 0)
+        ) as d
